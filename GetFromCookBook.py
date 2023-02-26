@@ -3,7 +3,7 @@ import re
 import requests
 
 
-if __name__ == '__main__':
+def getresult():
     url = 'https://github.com/b1owcar/cooking_receipe/raw/807d10d952bd2bdf129d1df74e5c2080af4e1ba9/README.md'
     # 添加请求头
     headers = {
@@ -25,6 +25,10 @@ if __name__ == '__main__':
                 dishes_lines.append({"name": dish_name, "link": dish_link})
     # 随机选取的菜
     choice = random.choice(dishes_lines)
+    return choice
+
+
+if __name__ == '__main__':
+    choice = getresult()
     print("今天吃: " + choice["name"])
     print("https://github.com/b1owcar/cooking_receipe/blob/main/" + choice["link"])
-
