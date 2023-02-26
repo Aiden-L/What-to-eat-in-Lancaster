@@ -22,7 +22,10 @@ def getresult():
             if match:
                 dish_name = match.group(1)
                 dish_link = match.group(2)
-                dishes_lines.append({"name": dish_name, "link": dish_link})
+                dishes_lines.append({
+                    "name": dish_name,
+                    "link": "https://github.com/b1owcar/cooking_receipe/blob/main/" + dish_link
+                })
     # 随机选取的菜
     choice = random.choice(dishes_lines)
     return choice
@@ -31,4 +34,4 @@ def getresult():
 if __name__ == '__main__':
     choice = getresult()
     print("今天吃: " + choice["name"])
-    print("https://github.com/b1owcar/cooking_receipe/blob/main/" + choice["link"])
+    print(choice["link"])
