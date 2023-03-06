@@ -4,7 +4,7 @@ import requests
 
 
 def getresult():
-    url = 'https://github.com/b1owcar/cooking_receipe/raw/807d10d952bd2bdf129d1df74e5c2080af4e1ba9/README.md'
+    url = 'https://github.com/b1owcar/cooking_receipe/raw/c3267a01e24fb225a9ea474497d120482a2187b1/README.md'
     # 添加请求头
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36'
